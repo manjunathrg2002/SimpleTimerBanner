@@ -1,25 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+// App.js
 
-function App() {
+import React from "react"; // Importing React library
+import "./App.css"; // Importing the CSS file for styling
+
+import Posts from "./components/Posts"; // Importing the Posts component
+import BannerNav from "./components/BannerNav"; // Importing the BannerNav component
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="main-container"> {/* Main container for the application */}
+      <BannerNav /> {/* Rendering the BannerNav component */}
+      <Posts /> {/* Rendering the Posts component */}
     </div>
   );
-}
+};
 
-export default App;
+export default App; // Exporting the App component as the default export
